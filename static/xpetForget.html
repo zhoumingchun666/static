@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+	<meta charset="UTF-8">
+	<title>梦幻怪兽H5</title>
+	<link rel="shortcut icon" href="./imgs/favicon.png">
+	<!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/xpetLogin.css">
+</head>
+<body style="height: 100%;">
+
+
+
+<div class="flex" style="height: 100%;">
+			<div class="Box">
+				<ul class="flex">
+					<li class="header active" onclick="regShow()">忘记密码</li>
+				</ul>
+
+				<div id="register-box" style="min-height: 413px;">
+
+					<ul>
+						<li class="flex inputBox">
+							<div class="ico flex"><img src="imgs/user.png" alt=""></div>
+							<input id="telNumber" type="text" placeholder="请输入手机号码">
+						</li>
+						<li class="flex">
+							<div class="inputBox" style="flex:1;">
+								<input style="padding-left: 12px;" id="smscode" type="text" placeholder="请输入验证码">
+							</div>
+							<div class="getCode" id="getCode">获取验证码</div>
+
+						</li>
+						<li class="flex inputBox">
+							<div class="ico flex"><img src="imgs/password.png" alt=""></div>
+							<input id="newpass" type="password" placeholder="请输入新密码">
+						</li>
+						<li class="flex inputBox">
+							<div class="ico flex"><img src="imgs/password.png" alt=""></div>
+							<input id="newpass2" type="password" placeholder="请再次输入新密码">
+						</li>
+					</ul>
+					<div class="loginBtn" id="operate" onclick="updatePass(this)">确定</div>
+					<!-- <div class="flex footer">
+						<div class="u-checkbox-box flex">
+							<span class="u-checkbox">
+								<img src="imgs/ok.png" alt="">
+							</span>
+							<label>七天免登录</label>
+						</div>
+						<div class="line"></div>
+						<div class="forget">忘记密码？</div>
+						<div class="registerGo">去注册</div>
+					<div class="otherLogin flex">
+						<div><img src="imgs/guest.png" alt=""></div>
+						<div class="guestLogin">游客登录</div>
+					</div>
+					</div> -->
+				</div>
+
+			</div>
+		</div>
+			
+
+		<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="js/getToken.js"></script>
+		<script type="text/javascript" src="js/xpetForget.js?v=0.1.2"></script>
+		<script type="text/javascript">
+
+			function loginShow(){
+				$("#login-box").show();
+				$("#register-box").hide();
+				$(".header").removeClass("active");
+				$(".header").eq(0).addClass("active");
+			}
+			function regShow(){
+				$("#login-box").hide();
+				$("#register-box").show();
+				$(".header").removeClass("active");
+				$(".header").eq(1).addClass("active");
+			}
+			function checkNoLogin(){
+				if($(".u-checkbox-box").hasClass("active")){
+					$(".u-checkbox-box").removeClass("active");
+				}else{
+					$(".u-checkbox-box").addClass("active");
+				}
+			}
+
+			$(function () {
+
+				$('#getCode').on('click', getCode);
+			})
+
+		</script>
+
+	<!-- <script type="text/javascript" src="js/common.js"></script> -->
+	<!-- <script type="text/javascript" src="js/index.js"></script> -->
+</body>
+</html>

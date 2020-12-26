@@ -1,0 +1,148 @@
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width,width=750px,minimum-scale=0.28, user-scalable=no">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/xpetLogin.css?v=0.0.2">
+		<style>
+			
+.msgCon {
+    position: fixed;
+    top: 40%;
+    z-index: 9999;
+    width: 100%;
+}
+.msgCon .msg {
+    border-radius: 30px;
+    color: #fff;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+    background: none repeat scroll 0 0 #000;
+    width: 50%;
+    max-width: 520px;
+    opacity: 0.9;
+}
+
+		</style>
+		<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+	</head>
+	<body>
+		<div class="flex" style="height: 100%;">
+			<div class="Box">
+				<ul class="flex">
+					<li class="header active" onclick="loginShow();">手机登录</li>
+					<li class="header" onclick="regShow()">手机注册</li>
+				</ul>
+				<div id="login-box">
+					<ul>
+						<li class="flex inputBox">
+							<div class="ico"><img src="imgs/user.png" alt=""></div>
+							<input id="user_no" type="text" placeholder="请输入手机号码">
+						</li>
+						<li class="flex inputBox">
+							<div class="ico"><img src="imgs/password.png" alt=""></div>
+							<input id="user_password" type="password" placeholder="请输入登录密码">
+						</li>
+					</ul>
+					<div class="loginBtn" id="operate" onclick="loginAgain(this)">登录</div>
+					<div class="flex footer">
+						<!-- <div class="u-checkbox-box flex" onclick="checkNoLogin()">
+							<span class="u-checkbox">
+								<img src="imgs/ok.png" alt="">
+							</span>
+							<label>七天免登录</label>
+						</div>
+						<div class="line"></div> -->
+						<div class="forget" onclick="forgetLinkGo()">忘记密码？</div>
+						<div class="registerGo" onclick="regShow()">去注册</div>
+					</div>
+					<div class="otherLogin flex">
+						<!-- <div><img src="imgs/guest.png" alt=""></div>
+						<div class="guestLogin">游客登录</div> -->
+					</div>
+				</div>
+
+				<div id="register-box" style="display: none">
+
+					<ul>
+						<li class="flex inputBox">
+							<div class="ico"><img src="imgs/user.png" alt=""></div>
+							<input id="telNumber" type="text" placeholder="请输入手机号码">
+						</li>
+						<li class="flex">
+							<div class="inputBox" style="flex:1;">
+								<input style="padding-left: 12px;" id="smscode" type="text" placeholder="请输入验证码">
+							</div>
+							<div class="getCode" id="getCode">获取验证码</div>
+
+						</li>
+						<li class="flex inputBox">
+							<div class="ico"><img src="imgs/password.png" alt=""></div>
+							<input id="nps" type="password" placeholder="请输入注册密码">
+						</li>
+						<!-- <li class="flex inputBox">
+							<div class="ico"><img src="imgs/password.png" alt=""></div>
+							<input id="nps" type="password" placeholder="请再次输入注册密码">
+						</li> -->
+					</ul>
+					<div class="loginBtn" id="operate" onclick="register(this)">注册</div>
+					<!-- <div class="flex footer">
+						<div class="u-checkbox-box flex">
+							<span class="u-checkbox">
+								<img src="imgs/ok.png" alt="">
+							</span>
+							<label>七天免登录</label>
+						</div>
+						<div class="line"></div>
+						<div class="forget">忘记密码？</div>
+						<div class="registerGo">去注册</div>
+					<div class="otherLogin flex">
+						<div><img src="imgs/guest.png" alt=""></div>
+						<div class="guestLogin">游客登录</div>
+					</div>
+					</div> -->
+				</div>
+
+			</div>
+		</div>
+			
+
+		<script type="text/javascript" src="js/getToken.js"></script>
+		<script type="text/javascript" src="js/xpetLogin.js?v=0.1.0"></script>
+		<script type="text/javascript">
+
+			function loginShow(){
+				$("#login-box").show();
+				$("#register-box").hide();
+				$(".header").removeClass("active");
+				$(".header").eq(0).addClass("active");
+			}
+			function regShow(){
+				$("#login-box").hide();
+				$("#register-box").show();
+				$(".header").removeClass("active");
+				$(".header").eq(1).addClass("active");
+			}
+			function forgetLinkGo(){
+				location.href = 'xpetForget.html'+location.search;
+			}
+			function checkNoLogin(){
+				if($(".u-checkbox-box").hasClass("active")){
+					$(".u-checkbox-box").removeClass("active");
+				}else{
+					$(".u-checkbox-box").addClass("active");
+				}
+			}
+
+			$(function () {
+
+				$('#getCode').on('click', getCode);
+			})
+
+		</script>
+	</body>
+
+</html>

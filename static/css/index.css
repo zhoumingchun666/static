@@ -1,0 +1,178 @@
+
+
+.wrap .page00 {
+    height:100%;
+     background: url(../imgs/bg.jpg) top center no-repeat; 
+    background-size: cover;
+}
+iframe{
+	height:100%;
+	/*margin:0 auto;*/
+	display: block;
+	border: none;
+}
+.leftBox,.rightBox{
+	flex: 1;
+	height:100%;
+}
+.leftBoxLine,.rightBoxLine{
+	width: 7px;
+	height:100%;
+}
+.leftBoxLine{
+	background: url(../imgs/leftBoxLine.png);
+}
+.rightBoxLine{
+	background: url(../imgs/rightBoxLine.png);
+}
+.contentBox{
+	/*width:546px;height:969px;*/
+	background:#e9d9c3;
+}
+.menpaiBox .item{
+	width: 356px;
+	height: 133px;
+	line-height: 18px;
+	margin-bottom: 10px;
+	font-size: 14.5px;
+	color: #783d10;
+	padding:12px 15px 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.menpaiBox .item .menpaiIco{
+	width: 70px;
+	height: 102px;
+	margin-right: 8px;
+}
+.menpaiBox .item .menpaiIco .menpaiImgs1{
+	width: 70px;
+	height: 70px;
+	margin-bottom: 8px;
+	background-size: 100% 100%;
+}
+.menpaiBox .item .menpaiIco .menpaiImgs2{
+	width: 62.3px;
+	height: 25.6px;
+	background-size: 100% 100%;
+	margin:0 auto;
+}
+.menpaiBox .item .menpaiContent{
+	flex: 1;
+	height: 102px;
+	padding-top: 33px;
+	box-sizing: border-box;
+}
+
+.menpaiBox .menpai01{
+	background: url(../imgs/menpai_01.jpg) no-repeat;
+}
+.menpaiBox .menpai01 .menpaiImgs1{
+	background: url(../imgs/menpai_01_false.png) no-repeat;
+}
+.menpaiBox .menpai01.active .menpaiImgs1,
+.menpaiBox .menpai01:hover .menpaiImgs1{
+	background: url(../imgs/menpai_01_true.png) no-repeat;
+	background-size: 100% 100%;
+}
+.menpaiBox .menpai02{
+	background: url(../imgs/menpai_02.jpg) no-repeat;
+}
+.menpaiBox .menpai02 .menpaiImgs1{
+	background: url(../imgs/menpai_02_false.png) no-repeat;
+}
+.menpaiBox .menpai02.active .menpaiImgs1,
+.menpaiBox .menpai02:hover .menpaiImgs1{
+	background: url(../imgs/menpai_02_true.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+
+.menpaiBox .menpai01 .menpaiImgs2,
+.menpaiBox .menpai02 .menpaiImgs2{
+	background: url(../imgs/renzu_01.png) no-repeat;
+}
+.menpaiBox .menpai01.active .menpaiImgs2,
+.menpaiBox .menpai02.active .menpaiImgs2,
+.menpaiBox .menpai01:hover .menpaiImgs2,
+.menpaiBox .menpai02:hover .menpaiImgs2{
+	background: url(../imgs/renzu_02.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.menpaiBox .menpai03 .menpaiImgs2,
+.menpaiBox .menpai04 .menpaiImgs2{
+	background: url(../imgs/mozu_01.png) no-repeat;
+}
+.menpaiBox .menpai03.active .menpaiImgs2,
+.menpaiBox .menpai04.active .menpaiImgs2,
+.menpaiBox .menpai03:hover .menpaiImgs2,
+.menpaiBox .menpai04:hover .menpaiImgs2{
+	background: url(../imgs/mozu_02.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.menpaiBox .menpai05 .menpaiImgs2,
+.menpaiBox .menpai06 .menpaiImgs2{
+	background: url(../imgs/xianzu_01.png) no-repeat;
+}
+.menpaiBox .menpai05.active .menpaiImgs2,
+.menpaiBox .menpai06.active .menpaiImgs2,
+.menpaiBox .menpai05:hover .menpaiImgs2,
+.menpaiBox .menpai06:hover .menpaiImgs2{
+	background: url(../imgs/xianzu_02.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+
+.menpaiBox .menpai03{
+	background: url(../imgs/menpai_03.jpg) no-repeat;
+}
+.menpaiBox .menpai03 .menpaiImgs1{
+	background: url(../imgs/menpai_03_false.png) no-repeat;
+}
+.menpaiBox .menpai03.active .menpaiImgs1,
+.menpaiBox .menpai03:hover .menpaiImgs1{
+	background: url(../imgs/menpai_03_true.png) no-repeat;
+	background-size: 100% 100%;
+}
+.menpaiBox .menpai04{
+	background: url(../imgs/menpai_04.jpg) no-repeat;
+}
+.menpaiBox .menpai04 .menpaiImgs1{
+	background: url(../imgs/menpai_04_false.png) no-repeat;
+}
+.menpaiBox .menpai04.active .menpaiImgs1,
+.menpaiBox .menpai04:hover .menpaiImgs1{
+	background: url(../imgs/menpai_04_true.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+
+
+.menpaiBox .menpai05{
+	background: url(../imgs/menpai_05.jpg) no-repeat;
+}
+
+.menpaiBox .menpai05 .menpaiImgs1{
+	background: url(../imgs/menpai_05_false.png) no-repeat;
+}
+.menpaiBox .menpai05.active .menpaiImgs1,
+.menpaiBox .menpai05:hover .menpaiImgs1{
+	background: url(../imgs/menpai_05_true.png) no-repeat;
+	background-size: 100% 100%;
+}
+.menpaiBox .menpai06{
+	background: url(../imgs/menpai_06.jpg) no-repeat;
+}
+.menpaiBox .menpai06 .menpaiImgs1{
+	background: url(../imgs/menpai_06_false.png) no-repeat;
+}
+.menpaiBox .menpai06.active .menpaiImgs1,
+.menpaiBox .menpai06:hover .menpaiImgs1{
+	background: url(../imgs/menpai_06_true.png) no-repeat;
+	background-size: 100% 100%;
+}

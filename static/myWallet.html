@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>梦幻怪兽H5</title>
+	<link rel="shortcut icon" href="./imgs/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bankList.css">
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="flex">
+			<div class="leftBox">
+				<div class="header flex">
+					<img src="imgs/mhlogo.png" style="height:36px;margin-right: 15px;">
+					<span>
+						北京时间：
+					</span>
+					<span id="time">--</span>
+					<span style="flex:1;"></span>
+				</div>
+			</div>
+			<div class="rightBox">
+				<!-- <div class="header flex">
+					<span style="flex:1;"></span>
+					<span class="msgMore">个人中心</span>
+					 | 
+					用户：1245454545 | 
+					快速充值 | 
+					游戏攻略
+				</div> -->
+			</div>
+		</div>
+
+
+
+
+<div class="Main" style="margin-top: 28px;">
+	<div class="BrowsePage">
+		<div class="BrowseKittyGallery">
+			<div class="KittiesGallery">
+				<div class="Container Container--lg">
+					<div class="flex" style="margin-bottom: 30px;">
+						<div style="min-width: 698px;">
+							<p class="" id="inviterTipsShow" style="margin:0;text-align: center;">
+								绑定你的其他公链账号提取你的银行余额！
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="Container Container--lg MyInvitedUser">
+					<!-- <table border="1" style="">
+						<tbody>
+							<tr>
+								<td align="center" style="min-width:180px;">
+									账号
+								</td>
+								<td align="center" style="max-width:200px;">
+									公链
+								</td>
+								<td align="center">
+									操作
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="">
+									xpetbenson
+								</td>
+								<td align="center" style="">
+									IOST
+								</td>
+								<td align="center">
+									<button class="xBlueBtn" onclick="bindAccountShow('IOST')" style="width:180px;">修改</button>
+								</td>
+							</tr>
+							<tr>
+								<td align="center" style="">
+								</td>
+								<td align="center" style="">
+									COCOS
+								</td>
+								<td align="center">
+									<button class="xBlueBtn" onclick="bindAccountShow('COCOS')" style="width:180px;">绑定</button>
+								</td>
+							</tr>
+						</tbody>
+					</table> -->
+				</div>
+			</div>
+			<div class="KittiesGalleryPagination">
+				<div class="Pagination">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+	</div>
+
+
+<div style="display: none;" id="bindAccount">
+	<div class="alert">
+		<div>
+			<h4>绑定账号</h4>
+			<ul>
+				<li class="flex">
+					<div>绑定的账号：</div>
+					<input type="text" id="bindAccountInput" placeholder="请输入你要绑定的账号" onfocus="focuusAction()" onblur="blurAction()" autofocus="autofocus" style="flex: 1;">
+				</li>
+				<p style="font-size: 1.7rem;" >你正在绑定 <span id="accountTips"></span> 账号，请绑定正确的账号，绑错账号造成损失无法追回</p>
+				<li class="clear">
+					<button class="right btn2 ok" onclick="bindAccountFun()" set-lan="ok">确认</button>
+					<button class="right btn2 cancel" onclick="$('#bindAccount').hide()" set-lan="cancel">取消</button>
+				</li>
+			</ul>
+		</div>
+			
+	</div>
+</div>
+
+	<script src="js/iost.min.js"></script>
+	<!-- <script src="js/bcx.min.js"></script> -->
+	<script src="js/eos16.0.9.min.js?v=1.0.0"></script>
+	<script src="js/scatterjs-core.min.js"></script>
+	<script src="js/scatterjs-plugin-eosjs.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/myWallet.js"></script>
+</body>
+</html>

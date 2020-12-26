@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+	<meta charset="UTF-8">
+	<title>梦幻怪兽H5</title>
+	<link rel="shortcut icon" href="./imgs/favicon.png">
+	<!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/xpetLogin.css">
+	<style type="text/css">
+		
+table{
+	border-spacing: 0;border-collapse: collapse;border: 1px solid #a1a1a1;
+	width:100%;margin:0 auto;
+}
+
+table td{
+	padding:10px 0;
+	color: #3b3b3b;
+	font-size: 20px;
+	border-color: #a1a1a1;
+	text-align: center;
+}
+.xBlueBtn{
+    -webkit-appearance: none;
+    background: transparent;
+    background: #3495f9;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    outline: none;
+    padding: 8px;
+    min-width: 80px;
+    height:42px;
+}
+.alert2 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.7);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    color: #0a0e11;
+}
+.newUserBox{
+	display:none;
+}
+.msgCon {
+    position: fixed;
+    top: 40%;
+    z-index: 9999;
+    width: 100%;
+}
+.msgCon .msg {
+    border-radius: 30px;
+    color: #fff;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+    background: none repeat scroll 0 0 #000;
+    width: 50%;
+    max-width: 520px;
+    opacity: 0.9;
+}
+
+
+	</style>
+</head>
+<body style="height: 100%;">
+
+<div class="flex" style="height:100%">
+	<div class="BrowsePage">
+		<div class="BrowseKittyGallery" style="max-width: 650px;">
+			<div class="KittiesGallery">
+				<div class="Container Container--lg">
+					<div class="flex" style="margin-bottom:12px;line-height: 52px;border-bottom: 4px solid #e8eaf0;">
+						<div>
+							<p class="" id="inviterTipsShow" style="margin:0;text-align: center;color:#2c82ff;">
+								充值
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="listMyRoleInfoShow" style="text-align: center;">
+					<button class="xBlueBtn" onclick="getConnectOk()" style="width:180px;">获取充值列表</button>
+				</div>
+				<div class="Container Container--lg MyInvitedUser">
+					<table border="1" style="width: 100%;">
+					</table>
+				</div>
+			</div>
+			<div class="KittiesGalleryPagination">
+				<div class="Pagination">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="stacklpBoxShow" style="display: none;">
+	<div class="alert2">
+		<div class="Box">
+			<ul class="flex">
+				<li class="header active" style="position: relative;">
+					充值
+					<img src="imgs/close.svg" style="position:absolute;top:25px;right:10px;width: 18px;" onclick="clearStacklpBoxShow()">
+				</li>
+			</ul>
+			<div style="min-height:413px;max-height: 413px;overflow-y: scroll;">
+				<ul>
+					<li class="flex inputBox">
+						<div class="ico flex"><img src="imgs/password.png" alt=""></div>
+						<input id="stacklpNum" type="text" placeholder="请输入要充值的数量">
+					</li>
+				</ul>
+				<div class="loginBtn" onclick="stacklp()">确定</div>
+				<!-- <ul>
+					<li>1、LP积分抵押后需24小时后才能解压；</li>
+					<li>2、LP积分可部分解压，解压后VIP等级即时发生变化；</li>
+					<li>3、LP积分兑换VIP等级列表</li>
+				</ul> -->
+			</div>
+		</div>
+	</div>
+</div>
+<div id="unstacklpBoxShow" style="display: none;">
+	<div class="alert2">
+		<div class="Box">
+			<ul class="flex">
+				<li class="header active" style="position: relative;">
+					解压
+					<img src="imgs/close.svg" style="position: absolute;top:25px;right:10px;    width: 18px;" onclick="clearUnStacklpBoxShow()">
+				</li>
+			</ul>
+			<div style="min-height: 413px;">
+				<ul>
+					<li class="inputBox" style="border: none;">
+						该角色已抵押 : <span class="stackTokenNum"></span> 积分，可用积分 : <span class="useStackTokenNum"></span>
+					</li>
+					<li class="flex inputBox">
+						<div class="ico flex"><img src="imgs/password.png" alt=""></div>
+						<input id="unstacklpNum" type="text" placeholder="请输入要解压的数量">
+					</li>
+				</ul>
+				<div class="loginBtn" onclick="unstacklp()">确定</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <div class="flex" style="height: 100%;display: none;">
+		</div> -->
+			
+
+		<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+		<script type="text/javascript" src="js/getToken.js"></script>
+	    <script type="text/javascript" src="js/eos16.0.0.min.js"></script>
+	    <script type="text/javascript" src="js/scatterjs-core.min.js"></script>
+	    <script type="text/javascript" src="js/scatterjs-plugin-eosjs.min.js"></script>
+		<script type="text/javascript" src="js/common.js?v=2020121800"></script>
+		<script type="text/javascript" src="js/xpetRecharge.js?v=2020121800"></script>
+		<script type="text/javascript">
+
+			$(function () {
+				$('#getCode').on('click', getCode);
+			})
+
+		</script>
+
+	<!-- <script type="text/javascript" src="js/common.js"></script> -->
+	<!-- <script type="text/javascript" src="js/index.js"></script> -->
+</body>
+</html>

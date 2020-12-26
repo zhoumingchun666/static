@@ -1,0 +1,169 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+html, body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: none;
+    font-family: "Microsoft YaHei","微软雅黑";
+    font-size: 20px;
+}
+
+input{
+
+	background:none;
+	outline:none;
+	border:0px;
+
+}
+ul{
+	list-style-type:none;
+}
+
+/*input[type="text"]:focus,
+
+input[type="password"]:focus {
+
+	border: 1px solid #eb7350;
+	background: #fff;
+	outline: none;
+
+}*/
+
+.flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Box{
+    width: 500px;
+    margin: auto;
+    background-color: #fff;
+    padding:0 15px;
+    box-sizing: border-box;
+}
+.header{
+	line-height: 63px;
+	font-size: 26px;
+	color: #ccc;
+	text-align: center;
+	border-bottom: 4px solid #e8eaf0;
+	position: relative;
+	margin-bottom: 18px;
+	flex:1;
+	cursor: pointer;
+}
+.header.active{
+	border-bottom: 4px solid #3495f9;
+	color: #3495f9;
+}
+/*.header .line{
+	position: absolute;
+	width:28%;
+	height: 4px;
+	bottom:-4px;
+	left:0;
+	background: #3495f9;
+}*/
+.ico{
+	width: 70px;
+	text-align: center;
+}
+.ico img{
+	width: 33px;
+}
+.inputBox{
+	border: 2px solid #a9a9a9;
+	margin-bottom: 12px;
+	line-height: 62px;
+}
+.inputBox input{
+	/*height: 36px;*/
+	line-height: 62px;
+	flex:1;
+    font-size: 20px;
+}
+.getCode{
+	height: 64px;
+	background: #2c82ff;color:#fff;width: 188px;margin-left: 10px;
+	line-height: 64px;
+	text-align: center;
+	margin-bottom: 12px;
+	cursor: pointer;
+}
+
+.loginBtn{
+	background: #3495f9;
+	color: #fff;
+	cursor: pointer;
+	text-align: center;
+	line-height: 62px;
+	font-size: 26px;
+	margin:39px 0;
+}
+
+.u-checkbox-box{
+	cursor: pointer;
+}
+
+.u-checkbox-box .u-checkbox{
+	display: block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border: solid 2px #afafaf;
+    color: #a1a1a1;
+}
+
+.u-checkbox-box .u-checkbox img{
+    width: 24px;
+    height: 24px;
+    display: none;
+}
+.u-checkbox-box.active .u-checkbox img{
+    display: block;
+}
+
+
+.u-checkbox-box label{
+    height: 16px;
+    padding-left: 8px;
+    font-size: 20px;
+    color: #a1a1a1;
+    line-height: 17px;
+    padding-left: 8px;
+	cursor: pointer;
+}
+.footer{
+	color: #a1a1a1;
+}
+.footer .line{
+	width: 2px;
+	height: 32px;
+	margin:0 20px;
+	background: #a1a1a1;
+}
+.forget{
+	cursor: pointer;
+}
+.registerGo{
+	cursor: pointer;
+	flex:1;text-align: right;
+}
+.otherLogin{
+	margin-top: 15px;
+	padding:30px 0;
+	border-top: 2px solid #a1a1a1;
+	color:#a1a1a1;
+}
+.otherLogin img{
+	width:23px;
+}
+.guestLogin{
+	flex: 1;margin-left: 5px;
+}

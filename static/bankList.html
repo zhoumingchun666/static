@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>梦幻怪兽H5</title>
+	<link rel="shortcut icon" href="./imgs/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bankList.css">
+</head>
+<body>
+
+	<div class="wrap">
+		<div class="flex">
+			<div class="leftBox">
+				<div class="header flex">
+					<img src="imgs/mhlogo.png" style="height:36px;margin-right: 15px;">
+					<span>
+						北京时间：
+					</span>
+					<span id="time">--</span>
+					<span style="flex:1;"></span>
+				</div>
+			</div>
+			<div class="rightBox">
+				<!-- <div class="header flex">
+					<span style="flex:1;"></span>
+					<span class="msgMore">个人中心</span>
+					 | 
+					用户：1245454545 | 
+					快速充值 | 
+					游戏攻略
+				</div> -->
+			</div>
+		</div>
+
+
+
+
+<div class="BrowseKittyGallery">
+	<div class="KittiesGallery">
+		<div class="Container Container--lg">
+			<div class="flex" style="text-align: center;padding:30px 0;justify-content: flex-end;display: none;"
+			id="candyMoneyShow">
+				<div style="font-weight: bolder;" id="candyTips">
+				</div>
+			</div>
+			<div class="TabNav phoneShow" style="border-bottom: 2px solid #f3f1ee;margin-bottom: 10px;">
+				<span class="TabNav-tab TabNav-tab--active" onclick="listKingdomTaxlog(0)">
+					&nbsp; EOS / XPC
+				</span>
+				<span class="TabNav-tab" onclick="selectTag('IOST')">
+					IOST
+				</span>
+				<span class="TabNav-tab" onclick="selectTag('COCOS')" style="">
+					COCOS
+				</span>
+				<!-- <span class="TabNav-tab" onclick="selectTag('token')">
+					令牌
+				</span> -->
+				<span class="TabNav-tab" onclick="listMyEOSMoneySend(0)">
+					提现状态
+				</span>
+			</div>
+		</div>
+		<div class="Container Container--lg" style="display: none;" id="moneySendShow">
+			<div class="" style="margin-bottom:10px;display: inline-block;">
+				<div class="flex" style="border: 1px solid #d2372b;border-radius: 10px;overflow:hidden;">
+					<div class="MyEOSMoneySend" onclick="listMyEOSMoneySend(0)">
+						EOS
+					</div>
+					<div class="MyEOSMoneySend" onclick="listMyIOSTMoneySender(0)">
+						IOST
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="Container Container--lg MyInvitedUser">
+			<!-- <table border="1" style="">
+				<tbody>
+					<tr>
+						<td align="center">
+							EOS
+						</td>
+						<td align="center">
+							XPC
+						</td>
+						<td align="center" style="">
+							类型
+						</td>
+						<td align="center" style="">
+							备注
+						</td>
+						<td align="center" style="">
+							时间
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="">
+							0.0000
+						</td>
+						<td align="center">
+							0.1256
+						</td>
+						<td align="center" style="">
+							XPET收入
+						</td>
+						<td align="center" style="">
+							TOKEN_DIVIDED
+						</td>
+						<td align="center" style="">
+							2020/12/03 14:30:00
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="">
+							0.0000
+						</td>
+						<td align="center">
+							0.1392
+						</td>
+						<td align="center" style="">
+							XPET收入
+						</td>
+						<td align="center" style="">
+							TOKEN_DIVIDED
+						</td>
+						<td align="center" style="">
+							2020/12/01 14:30:00
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="">
+							0.0000
+						</td>
+						<td align="center">
+							0.1543
+						</td>
+						<td align="center" style="">
+							XPET收入
+						</td>
+						<td align="center" style="">
+							TOKEN_DIVIDED
+						</td>
+						<td align="center" style="">
+							2020/11/29 14:30:01
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="">
+							0.0000
+						</td>
+						<td align="center">
+							0.1710
+						</td>
+						<td align="center" style="">
+							XPET收入
+						</td>
+						<td align="center" style="">
+							TOKEN_DIVIDED
+						</td>
+						<td align="center" style="">
+							2020/11/27 14:30:00
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="">
+							0.0000
+						</td>
+						<td align="center">
+							0.1896
+						</td>
+						<td align="center" style="">
+							XPET收入
+						</td>
+						<td align="center" style="">
+							TOKEN_DIVIDED
+						</td>
+						<td align="center" style="">
+							2020/11/25 14:30:00
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="">
+							0.0000
+						</td>
+						<td align="center">
+							0.2103
+						</td>
+						<td align="center" style="">
+							XPET收入
+						</td>
+						<td align="center" style="">
+							TOKEN_DIVIDED
+						</td>
+						<td align="center" style="">
+							2020/11/23 14:30:01
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="">
+							0.0000
+						</td>
+						<td align="center">
+							0.2331
+						</td>
+						<td align="center" style="">
+							XPET收入
+						</td>
+						<td align="center" style="">
+							TOKEN_DIVIDED
+						</td>
+						<td align="center" style="">
+							2020/11/21 14:30:00
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="">
+							0.0000
+						</td>
+						<td align="center">
+							0.2587
+						</td>
+						<td align="center" style="">
+							XPET收入
+						</td>
+						<td align="center" style="">
+							TOKEN_DIVIDED
+						</td>
+						<td align="center" style="">
+							2020/11/19 14:30:00
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="">
+							0.0000
+						</td>
+						<td align="center">
+							0.2871
+						</td>
+						<td align="center" style="">
+							XPET收入
+						</td>
+						<td align="center" style="">
+							TOKEN_DIVIDED
+						</td>
+						<td align="center" style="">
+							2020/11/17 14:30:00
+						</td>
+					</tr>
+					<tr>
+						<td align="center" style="">
+							0.0000
+						</td>
+						<td align="center">
+							0.3171
+						</td>
+						<td align="center" style="">
+							XPET收入
+						</td>
+						<td align="center" style="">
+							TOKEN_DIVIDED
+						</td>
+						<td align="center" style="">
+							2020/11/15 14:30:01
+						</td>
+					</tr>
+				</tbody>
+			</table> -->
+		</div>
+	</div>
+	<div class="KittiesGalleryPagination">
+		<div class="Pagination">
+			<!-- <div class="Pagination-pages">
+				<button class="Pagination-page Pagination-page--active" onclick="listKingdomTaxlog(0)">
+					1
+				</button>
+				<button class="Pagination-page" onclick="listKingdomTaxlog(1)">
+					2
+				</button>
+				<button class="Pagination-page" onclick="listKingdomTaxlog(2)">
+					3
+				</button>
+				<button class="Pagination-page" onclick="listKingdomTaxlog(3)">
+					4
+				</button>
+				<button class="Pagination-page" onclick="listKingdomTaxlog(4)">
+					5
+				</button>
+				<button class="Pagination-page" onclick="listKingdomTaxlog(5)">
+					6
+				</button>
+				<button class="Pagination-page" onclick="listKingdomTaxlog(6)">
+					7
+				</button>
+				<button class="Pagination-page" onclick="listKingdomTaxlog(7)">
+					8
+				</button>
+				<button class="Pagination-page" onclick="listKingdomTaxlog(8)">
+					9
+				</button>
+				<button class="Pagination-page" onclick="listKingdomTaxlog(9)">
+					10
+				</button>
+			</div>
+			<div>
+				<button class="Pagination-button Pagination-button--disabled">
+					上一页
+				</button>
+				<button class="Pagination-button" onclick="listKingdomTaxlog(1)">
+					下一页
+				</button>
+			</div> -->
+		</div>
+	</div>
+</div>
+
+
+
+
+	</div>
+
+	<script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/bankList.js"></script>
+</body>
+</html>
