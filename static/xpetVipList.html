@@ -6,6 +6,7 @@
 	<link rel="shortcut icon" href="./imgs/favicon.png">
 	<!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+	<meta name="viewport" content="width=device-width,width=636px,minimum-scale=0.36, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="css/xpetLogin.css">
 	<style type="text/css">
 		
@@ -28,11 +29,13 @@ table td{
     border: none;
     color: #fff;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 22px;
     outline: none;
     padding: 8px;
-    min-width: 80px;
-    height:42px;
+    width: 467px;
+	height:69px;
+	border-radius: 8px;
+	
 }
 .alert2 {
     width: 100%;
@@ -66,28 +69,84 @@ table td{
     max-width: 520px;
     opacity: 0.9;
 }
-
-
+.information_bar{
+	width: 636px;
+	height: 34px;
+	background-color: #ffffff;
+	margin: 0 auto;
+}
+.bg-img1{
+	width: 613px;
+	height: 17px;
+	margin-top: 9px;
+	margin-left: 10px;
+}
+.back{
+	width: 636px;
+	height: 75px;
+	background-color: #303030;
+	margin: 0 auto;
+	position: relative;
+}
+.back-button{
+	margin-left: 18px;
+	margin-top: 26px;
+	width: 19px;
+	height: 25px;
+}
+.back-content{
+	font-size: 22px;
+	line-height: 25px;
+	position: absolute;
+	top: 26px;
+	left: 36px;
+	color: #ffffff;
+}
+.empty-box{
+	width: 636px;
+	height: 30px;
+	background-color: #efeef4;
+	margin: 0 auto;
+}
+.BrowsePage{
+	width: 636px;
+	margin: 0 auto;
+}
+.position1{
+	margin: 0 auto;
+}
 	</style>
 </head>
 <body style="height: 100%;">
 
-<div class="flex" style="height:100%">
+	<div class="flex">
+		<div class="information_bar">
+			<img src="imgs/information_head.png" class="bg-img1">
+		</div>
+	</div>
+	<div class="back">
+		<img src="imgs/back_icon.png" class="back-button">
+		<p class="back-content">返回</p>
+	</div>
+	<div class="empty-box"></div>
 	<div class="BrowsePage">
-		<div class="BrowseKittyGallery" style="max-width: 650px;">
+		<div class="BrowseKittyGallery" style="max-width: 636px;">
 			<div class="KittiesGallery">
 				<div class="Container Container--lg">
-					<div class="flex" style="margin-bottom:12px;line-height: 52px;border-bottom: 4px solid #e8eaf0;">
+					<div class="flex position1"style="margin-bottom:27px;height:70px;border-bottom: 2px solid #e8eaf0;font-size: 22px;width: 598px;">
 						<div>
-							<p class="" id="inviterTipsShow" style="margin:0;text-align: center;color:#2c82ff;">
+							<p class="" id="inviterTipsShow" style="margin-top: 20px;text-align: center;color:#2c82ff;">
 
 								抵押TIME金库LP积分，获得VIP等级特权!
 							</p>
 						</div>
 					</div>
 				</div>
-				<div id="listMyRoleInfoShow" style="text-align: center;">
-					<button class="xBlueBtn" onclick="getConnectOk()" style="width:180px;">获取角色列表</button>
+				<div id="listMyRoleInfoShow" style="text-align: center;" class="btn1">
+					<button class="xBlueBtn" onclick="getConnectOk()">获取角色列表</button>
+				</div>
+				<div style="text-align: center;margin-top: 25px;" class="btn1">
+					<button class="xBlueBtn" onclick="goBack()">返回</button>
 				</div>
 				<div class="Container Container--lg MyInvitedUser">
 					<table border="1" style="width: 100%;">
@@ -100,109 +159,109 @@ table td{
 			</div>
 		</div>
 	</div>
-</div>
+	<div id="stacklpBoxShow" style="display: none;">
+		<div class="alert2">
+			<div class="Box">
+				<ul class="flex">
+					<li class="header active" style="position: relative;">
+						抵押
+						<img src="imgs/close.svg" style="position:absolute;top:25px;right:10px;width: 18px;" onclick="clearStacklpBoxShow()">
+					</li>
+				</ul>
+				<div style="min-height:413px;max-height: 413px;overflow-y: scroll;">
+					<ul>
+						<li class="inputBox" style="border: none;">
+							该角色已抵押 : <span class="stackTokenNum"></span> 积分，可用积分 : <span class="useStackTokenNum"></span>
+						</li>
+						<li class="flex inputBox">
+							<div class="ico flex"><img src="imgs/password.png" alt=""></div>
+							<input id="stacklpNum" type="text" placeholder="请输入要抵押的数量">
+						</li>
+					</ul>
+					<div class="loginBtn" onclick="stacklp()">确定</div>
+					<ul>
+						<li>1、LP积分抵押后需24小时后才能解压；</li>
+						<li>2、LP积分可部分解压，解压后VIP等级即时发生变化；</li>
+						<li>3、LP积分兑换VIP等级列表</li>
+					</ul>
+					<table border="1" style="margin:18px 0;">
+						<tbody>
+							<tr>
+								<td align="center">积分</td>
+								<td align="center">VIP等级</td>
+							</tr>
+							<tr>
+								<td align="center">10 LP</td>
+								<td align="center">V1</td>
+							</tr>
+							<tr>
+								<td align="center">100 LP</td>
+								<td align="center">V2</td>
+							</tr>
+							<tr>
+								<td align="center">200 LP</td>
+								<td align="center">V3</td>
+							</tr>
+							<tr>
+								<td align="center">300 LP</td>
+								<td align="center">V4</td>
+							</tr>
+							<tr>
+								<td align="center">500 LP</td>
+								<td align="center">V5</td>
+							</tr>
+							<tr>
+								<td align="center">1000 LP</td>
+								<td align="center">V6</td>
+							</tr>
+							<tr>
+								<td align="center">2000 LP</td>
+								<td align="center">V7</td>
+							</tr>
+							<tr>
+								<td align="center">3000 LP</td>
+								<td align="center">V8</td>
+							</tr>
+							<tr>
+								<td align="center">5000 LP</td>
+								<td align="center">V9</td>
+							</tr>
+							<tr>
+								<td align="center">10000 LP</td>
+								<td align="center">V10</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="unstacklpBoxShow" style="display: none;">
+		<div class="alert2">
+			<div class="Box">
+				<ul class="flex">
+					<li class="header active" style="position: relative;">
+						解压
+						<img src="imgs/close.svg" style="position: absolute;top:25px;right:10px;    width: 18px;" onclick="clearUnStacklpBoxShow()">
+					</li>
+				</ul>
+				<div style="min-height: 413px;">
+					<ul>
+						<li class="inputBox" style="border: none;">
+							该角色已抵押 : <span class="stackTokenNum"></span> 积分，可用积分 : <span class="useStackTokenNum"></span>
+						</li>
+						<li class="flex inputBox">
+							<div class="ico flex"><img src="imgs/password.png" alt=""></div>
+							<input id="unstacklpNum" type="text" placeholder="请输入要解压的数量">
+						</li>
+					</ul>
+					<div class="loginBtn" onclick="unstacklp()">确定</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<div id="stacklpBoxShow" style="display: none;">
-	<div class="alert2">
-		<div class="Box">
-			<ul class="flex">
-				<li class="header active" style="position: relative;">
-					抵押
-					<img src="imgs/close.svg" style="position:absolute;top:25px;right:10px;width: 18px;" onclick="clearStacklpBoxShow()">
-				</li>
-			</ul>
-			<div style="min-height:413px;max-height: 413px;overflow-y: scroll;">
-				<ul>
-					<li class="inputBox" style="border: none;">
-						该角色已抵押 : <span class="stackTokenNum"></span> 积分，可用积分 : <span class="useStackTokenNum"></span>
-					</li>
-					<li class="flex inputBox">
-						<div class="ico flex"><img src="imgs/password.png" alt=""></div>
-						<input id="stacklpNum" type="text" placeholder="请输入要抵押的数量">
-					</li>
-				</ul>
-				<div class="loginBtn" onclick="stacklp()">确定</div>
-				<ul>
-					<li>1、LP积分抵押后需24小时后才能解压；</li>
-					<li>2、LP积分可部分解压，解压后VIP等级即时发生变化；</li>
-					<li>3、LP积分兑换VIP等级列表</li>
-				</ul>
-				<table border="1" style="margin:18px 0;">
-					<tbody>
-						<tr>
-							<td align="center">积分</td>
-							<td align="center">VIP等级</td>
-						</tr>
-						<tr>
-							<td align="center">10 LP</td>
-							<td align="center">V1</td>
-						</tr>
-						<tr>
-							<td align="center">100 LP</td>
-							<td align="center">V2</td>
-						</tr>
-						<tr>
-							<td align="center">200 LP</td>
-							<td align="center">V3</td>
-						</tr>
-						<tr>
-							<td align="center">300 LP</td>
-							<td align="center">V4</td>
-						</tr>
-						<tr>
-							<td align="center">500 LP</td>
-							<td align="center">V5</td>
-						</tr>
-						<tr>
-							<td align="center">1000 LP</td>
-							<td align="center">V6</td>
-						</tr>
-						<tr>
-							<td align="center">2000 LP</td>
-							<td align="center">V7</td>
-						</tr>
-						<tr>
-							<td align="center">3000 LP</td>
-							<td align="center">V8</td>
-						</tr>
-						<tr>
-							<td align="center">5000 LP</td>
-							<td align="center">V9</td>
-						</tr>
-						<tr>
-							<td align="center">10000 LP</td>
-							<td align="center">V10</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
-</div>
-<div id="unstacklpBoxShow" style="display: none;">
-	<div class="alert2">
-		<div class="Box">
-			<ul class="flex">
-				<li class="header active" style="position: relative;">
-					解压
-					<img src="imgs/close.svg" style="position: absolute;top:25px;right:10px;    width: 18px;" onclick="clearUnStacklpBoxShow()">
-				</li>
-			</ul>
-			<div style="min-height: 413px;">
-				<ul>
-					<li class="inputBox" style="border: none;">
-						该角色已抵押 : <span class="stackTokenNum"></span> 积分，可用积分 : <span class="useStackTokenNum"></span>
-					</li>
-					<li class="flex inputBox">
-						<div class="ico flex"><img src="imgs/password.png" alt=""></div>
-						<input id="unstacklpNum" type="text" placeholder="请输入要解压的数量">
-					</li>
-				</ul>
-				<div class="loginBtn" onclick="unstacklp()">确定</div>
-			</div>
-		</div>
-	</div>
-</div>
+
 <!-- <div class="flex" style="height: 100%;display: none;">
 		</div> -->
 			
@@ -212,14 +271,18 @@ table td{
 	    <script type="text/javascript" src="js/eos16.0.0.min.js"></script>
 	    <script type="text/javascript" src="js/scatterjs-core.min.js"></script>
 	    <script type="text/javascript" src="js/scatterjs-plugin-eosjs.min.js"></script>
-		<script type="text/javascript" src="js/common.js?v=2020121617"></script>
-		<script type="text/javascript" src="js/xpetVipList.js?v=2020121617"></script>
+		<script type="text/javascript" src="js/common.js?v=2020122200"></script>
+		<script type="text/javascript" src="js/xpetVipList.js?v=2020122200"></script>
 		<script type="text/javascript">
 
 			$(function () {
 				$('#getCode').on('click', getCode);
 			})
 
+
+			function goBack(){
+				history.go(-1);
+			}
 		</script>
 
 	<!-- <script type="text/javascript" src="js/common.js"></script> -->

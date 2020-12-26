@@ -1,7 +1,7 @@
 
 $(function() {
   var src = 'https://mhxpet.xlootcn.com';
-  var ver = 2020121118;
+  var ver = new Date().getTime();
 
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     window.location = src;
