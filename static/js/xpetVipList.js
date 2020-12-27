@@ -49,11 +49,11 @@ function listMyRoleInfo() {
                 html += '<table border="1" style=""> ';
                 html += '   <tbody>';
                 html += '    <tr> ';
-                html += '     <td align="center" style="width:105px;">服务器</td> ';
-                html += '     <td align="center" style="width:100px;">角色</td> ';
-                html += '     <td align="center" style="width:50px;">VIP</td> ';
-                html += '     <td align="center" style="min-width:50px;">积分</td> ';
-                html += '     <td align="center" style="width:180px;">操作</td> ';
+                html += '     <td align="center" style="width:115px;height:29px">服务器</td> ';
+                html += '     <td align="center" style="width:115px;height:29px">角色</td> ';
+                html += '     <td align="center" style="width:54px;height:29px">VIP</td> ';
+                html += '     <td align="center" style="width:54px;height:29px">积分</td> ';
+                html += '     <td align="center" style="width:248px;height:29px">操作</td> ';
                 html += '    </tr>';
 
                 // avata: "{"avatarTag":"clothes1005","head4":"100010_2","weaponTag":"weapon005"}"
@@ -70,13 +70,13 @@ function listMyRoleInfo() {
 
                 $.each(obj, function(i, n) {
                     html += '<tr id="list_' + n.roleId + '"> ';
-                    html += ' <td align="center" style="color:#a1a1a1;">' + n.serverTag + '</td> ';
-                    html += ' <td align="center" style="color:#a1a1a1;">' + n.name + '</td> ';
-                    html += ' <td align="center" style="color:#a1a1a1;">' + n.vipLevel + '</td> ';
-                    html += ' <td align="center" style="color:#a1a1a1;" class="integral">--</td> ';
-                    html += ' <td align="center">';
-                    html += '   <button class="xBlueBtn" onclick="stacklpShow(' + n.roleId + ')" style="">抵押</button>';
-                    html += '   <button class="xBlueBtn" onclick="unstacklpShow(' + n.roleId + ')" style="">解压</button>';
+                    html += ' <td align="center" style="color:#a1a1a1;width:115px;height:67px">' + n.serverTag + '</td> ';
+                    html += ' <td align="center" style="color:#a1a1a1;width:115px;height:67px">' + n.name + '</td> ';
+                    html += ' <td align="center" style="color:#a1a1a1;width:54px;height:67px">' + n.vipLevel + '</td> ';
+                    html += ' <td align="center" style="color:#a1a1a1;width:54px;height:67px" class="integral">--</td> ';
+                    html += ' <td align="center" style="width:248px;height:67px">';
+                    html += '   <button class="xBlueBtn-small" onclick="stacklpShow(' + n.roleId + ')" style="">抵押</button>';
+                    html += '   <button class="xBlueBtn-small" onclick="unstacklpShow(' + n.roleId + ')" style="">解压</button>';
                     html += ' </td> ';
                     html += '</tr>';
                 })

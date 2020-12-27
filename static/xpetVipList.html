@@ -22,7 +22,7 @@ table td{
 	border-color: #a1a1a1;
 	text-align: center;
 }
-.xBlueBtn{
+.xBlueBtn,.xBlueBtn-small{
     -webkit-appearance: none;
     background: transparent;
     background: #3495f9;
@@ -31,11 +31,16 @@ table td{
     cursor: pointer;
     font-size: 22px;
     outline: none;
-    padding: 8px;
-    width: 467px;
+    padding: 8px;	
+}
+.xBlueBtn{
+	width: 467px;
 	height:69px;
 	border-radius: 8px;
-	
+}
+.xBlueBtn-small{
+	width: 108px;
+	height: 75px;
 }
 .alert2 {
     width: 100%;
@@ -145,7 +150,7 @@ table td{
 				<div id="listMyRoleInfoShow" style="text-align: center;" class="btn1">
 					<button class="xBlueBtn" onclick="getConnectOk()">获取角色列表</button>
 				</div>
-				<div style="text-align: center;margin-top: 25px;" class="btn1">
+				<div style="text-align: center;margin-top: 25px;margin-bottom: 19px;" class="btn1">
 					<button class="xBlueBtn" onclick="goBack()">返回</button>
 				</div>
 				<div class="Container Container--lg MyInvitedUser">
