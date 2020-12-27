@@ -6,6 +6,7 @@
 	<link rel="shortcut icon" href="./imgs/favicon.png">
 	<!-- <link rel="stylesheet" type="text/css" href="css/common.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+	<meta name="viewport" content="width=device-width,width=636px,minimum-scale=0.36, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="css/xpetLogin.css">
 	<style type="text/css">
 		
@@ -17,23 +18,11 @@ table{
 table td{
 	padding:10px 0;
 	color: #3b3b3b;
-	font-size: 20px;
+	font-size: 22px;
 	border-color: #a1a1a1;
 	text-align: center;
 }
-.xBlueBtn{
-    -webkit-appearance: none;
-    background: transparent;
-    background: #3495f9;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 20px;
-    outline: none;
-    padding: 8px;
-    min-width: 80px;
-    height:42px;
-}
+
 .alert2 {
     width: 100%;
     height: 100%;
@@ -68,42 +57,162 @@ table td{
 }
 
 
+.information_bar{
+	width: 636px;
+	height: 34px;
+	background-color: #ffffff;
+	margin: 0 auto;
+}
+.bg-img1{
+	width: 613px;
+	height: 17px;
+	margin-top: 9px;
+	margin-left: 10px;
+}
+.back{
+	width: 636px;
+	height: 75px;
+	background-color: #303030;
+	margin: 0 auto;
+	position: relative;
+}
+.back-button{
+	margin-left: 18px;
+	margin-top: 26px;
+	width: 19px;
+	height: 25px;
+}
+.back-content{
+	font-size: 22px;
+	line-height: 25px;
+	position: absolute;
+	top: 26px;
+	left: 36px;
+	color: #ffffff;
+}
+.empty-box{
+	width: 636px;
+	height: 30px;
+	background-color: #efeef4;
+	margin: 0 auto;
+}
+.BrowsePage{
+	width: 636px;
+	margin: 0 auto;
+}
+.position2{
+	margin: 0 auto;
+}
+.xBlueBtn,.xBlueBtn-small{
+    -webkit-appearance: none;
+    background: transparent;
+    background: #3495f9;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 22px;
+    outline: none;
+    padding: 8px;	
+}
+.xBlueBtn{
+	width: 467px;
+	height:69px;
+	border-radius: 8px;
+}
+.xBlueBtn-small{
+	width: 108px;
+	height: 75px;
+}
+.onehundredyuan{
+	width: 636px;
+	margin: 0 auto;
+}
+.oneHundred{
+	width: 598px;
+	height: 147px;
+	border-bottom: 2px solid #e8eaf0;
+	margin: 0 auto;
+}
+.buying{
+	font-size: 20px;
+	color: #666666;
+	margin-top: 37px;
+	margin-left: 89px;
+	margin-bottom: 26px;
+}
+.xBlueBtn1,.xBlueBtn2{
+	width: 220px;
+	height: 140px;
+	border: 2px solid #3495f9;
+	border-radius: 8px;
+	text-align: center;
+	line-height: 140px;
+	
+}
+.MyInvitedUser{
+	width: 636px;
+	margin: 0 auto;
+	position: relative;
+}
+.xBlueBtn1{
+	background-color: #ffffff;
+	color: #3495f9;
+	margin-left: 86px;
+}
+.xBlueBtn2{
+	background-color: #3495f9;
+	color: #ffffff;
+	position: absolute;
+	left: 328px;
+	top: 0;
+}
+
 	</style>
 </head>
 <body style="height: 100%;">
 
-<div class="flex" style="height:100%">
-	<div class="BrowsePage">
-		<div class="BrowseKittyGallery" style="max-width: 650px;">
-			<div class="KittiesGallery">
-				<div class="Container Container--lg">
-					<div class="flex" style="margin-bottom:12px;line-height: 52px;border-bottom: 4px solid #e8eaf0;">
-						<div>
-							<p class="" id="inviterTipsShow" style="margin:0;text-align: center;color:#2c82ff;">
-								充值
-							</p>
-						</div>
+<div class="flex">
+	<div class="information_bar">
+		<img src="imgs/information_head.png" class="bg-img1">
+	</div>
+</div>
+<div class="back">
+	<img src="imgs/back_icon.png" class="back-button">
+	<p class="back-content">返回</p>
+</div>
+<div class="empty-box"></div>
+<div class="BrowsePage">
+	<div class="BrowseKittyGallery" style="max-width: 650px;">
+		<div class="KittiesGallery">
+			<div class="Container Container--lg" id="kickhide">
+				<div class="flex position2" style="margin-bottom:27px;line-height: 52px;border-bottom: 4px solid #e8eaf0;font-size:22px;width:598px;">
+					<div>
+						<p class="" id="inviterTipsShow" style="margin:0;text-align: center;color:#2c82ff;margin-top: 20px;">
+							充值
+						</p>
 					</div>
 				</div>
-				<div id="listMyRoleInfoShow" style="text-align: center;">
-					<button class="xBlueBtn" onclick="getConnectOk()" style="width:180px;">获取充值列表</button>
-				</div>
-				<div class="Container Container--lg MyInvitedUser">
-					<table border="1" style="width: 100%;">
-					</table>
-				</div>
-				<div style="text-align: center;margin-top: 10px;">
-					<button class="xBlueBtn" onclick="goBack()" style="width:180px;">返回</button>
-				</div>
 			</div>
-			<div class="KittiesGalleryPagination">
-				<div class="Pagination">
-				</div>
+			<div id="listMyRoleInfoShow" style="text-align: center;">
+				<button class="xBlueBtn" onclick="getConnectOk()">获取充值列表</button>
+			</div>
+			<!--100元宝购买-->
+			<div class="onehundredyuan">
+			</div>
+			<!--两个购买按钮-->
+			<div class="Container Container--lg MyInvitedUser">
+			</div>
+
+			<div style="text-align: center;margin-top: 25px;" id="backBtn">
+				<button class="xBlueBtn" onclick="goBack()">返回</button>
+			</div>
+		</div>
+		<div class="KittiesGalleryPagination">
+			<div class="Pagination">
 			</div>
 		</div>
 	</div>
 </div>
-
 <div id="stacklpBoxShow" style="display: none;">
 	<div class="alert2">
 		<div class="Box">

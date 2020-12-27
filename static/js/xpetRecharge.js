@@ -19,10 +19,13 @@ $(function() {
 function getConnectOk(){
 
     if (getCookie("token")) {
-        listMyRoleInfo();
+        onehundredyuan();
+        listMyRoleInfo();   
+        $("#backBtn").hide();
     }
     connectEOS();
     $("#listMyRoleInfoShow").hide();
+    $("#kickhide").hide();
 }
 
 function clearStacklpBoxShow() {
@@ -38,29 +41,22 @@ function clearUnStacklpBoxShow() {
 function listMyRoleInfo() {
 
     var html = '';
-    html += '<table border="1" style=""> ';
-    html += '   <tbody>';
-    html += '    <tr>';
-    html += '     <td align="center" style="width:105px;">充值代币</td>';
-    html += '     <td align="center" style="width:180px;">操作</td>';
-    html += '    </tr>';
-
-    html += '    <tr>';
-    html += '     <td align="center" style="color:#a1a1a1;">XPC</td>';
-    html += '     <td>';
-    html += '       <button class="xBlueBtn" onclick="stacklpShow(1)">充值</button>';
-    html += '     </td>';
-    html += '    </tr>';
-    html += '    <tr>';
-    html += '     <td align="center" style="color:#a1a1a1;">EOS</td>';
-    html += '     <td>';
-    html += '       <button class="xBlueBtn" onclick="stacklpShow(2)">充值</button>';
-    html += '     </td>';
-    html += '    </tr>';
-    html += '   </tbody>';
-    html += '</table>';
+    html += '<div class="xBlueBtn1" onclick="stacklpShow(1)">XPC支付</div>';
+    html += '<div class="xBlueBtn2" onclick="stacklpShow(2)">EOS支付</div>';
     $(".BrowseKittyGallery .MyInvitedUser").html(html);
 
+}
+function onehundredyuan(){
+    var html='';
+    html += '<div style="margin-bottom:34px">'
+    html += '<div class="oneHundred">';
+    html += '  <div class="buying">您正在购买</div>'
+    html += '  <div style="text-align: center;">'
+    html += '    <button class="xBlueBtn" onclick="">100元宝</button>'
+    html += '  </div>'
+    html += '</div>'
+    html += '</div>'
+    $(".onehundredyuan").html(html)
 }
 
 
